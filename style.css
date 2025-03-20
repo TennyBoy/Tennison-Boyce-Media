@@ -119,8 +119,17 @@ footer {
 
 
 /* Portfolio */
+#portfolio {
+    /* padding: 0; */
+}
+
 #portfolio .wrapper {
     flex-direction: column;
+    gap: 1.75em;
+}
+
+#portfolio .wrapper > div {
+    /* margin-block: 1.5em; */
 }
 
 #portfolio img {
