@@ -127,7 +127,10 @@ footer {
 }
 
 #portfolio #imgLink {
-    height: 0px;
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
+    display: inline-block;
 }
 
 #portfolio a img {
@@ -165,9 +168,9 @@ footer {
     text-shadow: 0 0 1em rgba(0,0,0,1);
 }
 
-#portfolio1 {
+/* #portfolio1 {
     background: linear-gradient(to right, var(--accent-1) 25%, rgba(0,0,0,1));
-}
+} */
 
 #portfolio #portfolio1 .split main a {
     color: var(--accent-1);
