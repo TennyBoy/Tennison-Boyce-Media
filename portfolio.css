@@ -175,95 +175,34 @@ footer .socialLinks .fa-brands {
 
 
 
-/* Landing Page */
-/* Hero */
-#hero {
-    height: 100svh;
-
-    padding: 0;
-
-    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25) 100%), url(https://www.dropbox.com/scl/fi/1bq4zwqcibf8m1y6ho07v/HondaCRZ5PC.JPG?rlkey=0uvnhwjyzntqwh9nbzoakbuzf&st=5rfkjm41&raw=1) no-repeat;
-    background-position: center;
-    background-size: cover;
+/* Portfolio Page */
+/* General */
+header .wrapper {
+    justify-content: center;
 }
 
-#hero .wrapper {
-    justify-content: flex-start;
-    align-items: center;
+main .wrapper {
+    gap: 2rem;
 }
 
-#hero main > h1 {
-    font-size: clamp(1rem, 2.75vw + 1rem, 4rem);
-    font-weight: 900;
+main .wrapper > * {
+    flex-basis: 100%;
 }
 
-#hero main > h2 {
-    font-size: clamp(1rem, 1.5vw + 1rem, 3rem);
-    font-weight: 100;
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-
-
-/* Portfolio */
-#portfolio .split {
-    gap: 2em;
-}
-
-#portfolio .container {
-    position: relative;
-    margin-block: 2.5em;
+.row {
     animation: scrollFade forwards;
     -webkit-animation: scrollFade forwards;
     animation-timeline: view();
     animation-range: entry;
-    transition: 500ms;
-    -webkit-transition: 500ms;
-    -moz-transition: 500ms;
-    -ms-transition: 500ms;
-    -o-transition: 500ms;
 }
 
-#portfolio img {
+.column img {
     height: auto;
     width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    object-position: center;
-  }
-
-#portfolio .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 500ms ease;
-    background-color: rgba(0,0,0,0.75);
-    -webkit-transition: 500ms ease;
-    -moz-transition: 500ms ease;
-    -ms-transition: 500ms ease;
-    -o-transition: 500ms ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-#portfolio .container:hover .overlay {
-    opacity: 1;
-  }
-
-#portfolio .overlayLink {
-    height: 100%;
-    width: 100%;
-    color: var(--txt-primary);
-    text-decoration: none;
-    text-align: center;
-    font-size: clamp(1rem, 5vw + 1rem, 50rem);
-    font-weight: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
