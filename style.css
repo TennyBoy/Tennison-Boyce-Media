@@ -23,7 +23,7 @@
 
 html,
 body {
-    height: fit-content;
+    min-height: 100%;
     width: 100%;
     scroll-behavior: smooth;
 }
@@ -182,7 +182,7 @@ footer .socialLinks .fa-brands {
 
     padding: 0;
 
-    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25) 100%), url(https://www.dropbox.com/scl/fi/1bq4zwqcibf8m1y6ho07v/HondaCRZ5PC.JPG?rlkey=0uvnhwjyzntqwh9nbzoakbuzf&st=5rfkjm41&raw=1) no-repeat;
+    background: linear-gradient(to bottom, rgba(20,20,20,0.25) 90%, rgba(20,20,20,1) 100%), url(CrownedEdit1Laptop.jpeg) no-repeat;
     background-position: center;
     background-size: cover;
 }
