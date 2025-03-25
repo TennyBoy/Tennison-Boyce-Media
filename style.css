@@ -2,14 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Gabarito:wght@400..900&family=Mrs+Saint+Delafield&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ruthie&display=swap');
 
 
-/* System Settings */
+/* Reset */
 :root {
-    --bg-primary: rgba(20,20,20,1);
+    --bg-primary: rgba(0,0,0,1);
+
     --txt-primary: rgba(255,255,255,1);
-    --accent-1: rgba(245,222,179,1);
-    --accent-2: rgba(0,235,235,1);
 
     --ff-primary: "Roboto", sans-serif;
+}
+
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+    font-family: var(--ff-primary);
 }
 
 ::-webkit-scrollbar {
@@ -21,57 +27,16 @@
     padding: 0;
 }
 
-html,
-body {
-    min-height: 100%;
-    width: 100%;
-    scroll-behavior: smooth;
-}
-
-body {
-    background: var(--bg-primary);
-    color: var(--txt-primary);
-    font-family: var(--ff-primary);
-}
-
-
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes scrollFade {
-    0% {
-        opacity: 0;
-        scale: 0.8;
-    }
-
-    100% {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-
-
-/* General Settings */
-section {
-    height: fit-content;
-    width: 100%;
+img {
+    display: block;
+    object-position: center;
+    object-fit: cover;
 }
 
 .wrapper {
     height: 100%;
     width: 90%;
     margin-inline: auto;
-    display: flex;
 }
 
 .split {
@@ -84,186 +49,77 @@ section {
     flex-basis: 100%;
 }
 
-header {
+nav {
     height: fit-content;
     width: 100%;
+    position: fixed;
+    top: 0;
+    padding-block: 1em;
+}
+
+nav .split > div {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: auto;
+    width: 50%;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.navLinks a {
+    font-size: clamp(0rem, 0.01vw + 1rem, 50rem);
+    font-weight: 100;
+    text-decoration: none;
+    color: var(--txt-primary);
+}
+
+.navLinks a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Hero */
+#hero {
+    height: 100svh;
+    width: 100%;
+    background: var(--bg-primary);
+    color: var(--txt-primary);
+}
+
+#hero .split > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(1rem, 1vw + 1rem, 3.25rem);
-    font-weight: 500;
-    margin-block: 1em;
 }
 
-header + main {
-    height: fit-content;
+#hero main {
+    height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-block: 1em;
-}
-
-img {
-    display: block;
-    object-fit: cover;
-    object-position: center;
-}
-
-
-
-
-/* Footer */
-footer {
-    height: fit-content;
-    width: 100%;
-    background: rgba(5,5,5,1);
-    padding: 2.5em 0;
-    position: relative;
-    bottom: 0;
-}
-
-footer .contactInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1em;
 }
 
-footer .contactInfo > i {
-    display: flex;
-    gap: 0.25em;
-    font-size: clamp(0.25rem, 0.5vw + 1rem, 1.75rem);
-}
-
-footer .contactInfo p {
-    font-size: clamp(0.25rem, 0.5vw + 1rem, 1.75rem);
-    font-weight: 200;
-}
-
-footer .socialLinks {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1em;
-}
-
-footer .socialLinks > a {
-    color: var(--txt-primary);
-}
-
-footer .socialLinks > a > i {
-    font-size: clamp(1.75rem, 2vw + 1rem, 4rem);
-}
-
-footer .socialLinks .fa-brands {
-    transition: 150ms;
-    -webkit-transition: 150ms;
-    -moz-transition: 150ms;
-    -ms-transition: 150ms;
-    -o-transition: 150ms;
-}
-
-.fa-instagram:hover {
-    color: rgba(237,8,142,1);
-}
-
-.fa-facebook:hover {
-    color: rgba(24,119,242);
-}
-
-
-
-/* Landing Page */
-/* Hero */
-#hero {
-    height: 100svh;
-
-    padding: 0;
-
-    background: linear-gradient(to bottom, rgba(20,20,20,0.25) 90%, rgba(20,20,20,1) 100%), url(CrownedEdit1Laptop.jpeg) no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-#hero .wrapper {
-    justify-content: flex-start;
-    align-items: center;
-}
-
-#hero main > h1 {
-    font-size: clamp(1rem, 2.75vw + 1rem, 4rem);
+#hero main h1 {
+    font-size: clamp(1rem, 2vw + 1rem, 50rem);
     font-weight: 900;
 }
 
-#hero main > h2 {
-    font-size: clamp(1rem, 1.5vw + 1rem, 3rem);
+#hero main h2 {
+    font-size: clamp(1rem, 0.75vw + 1rem, 50rem);
     font-weight: 100;
 }
 
-
-
-/* Portfolio */
-#portfolio .split {
-    gap: 2em;
-}
-
-#portfolio .container {
-    position: relative;
-    margin-block: 2.5em;
-    animation: scrollFade forwards;
-    -webkit-animation: scrollFade forwards;
-    animation-timeline: view();
-    animation-range: entry;
-    transition: 500ms;
-    -webkit-transition: 500ms;
-    -moz-transition: 500ms;
-    -ms-transition: 500ms;
-    -o-transition: 500ms;
-}
-
-#portfolio img {
+#heroImg {
     height: auto;
     width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    object-position: center;
-  }
-
-#portfolio .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 500ms ease;
-    background-color: rgba(0,0,0,0.75);
-    -webkit-transition: 500ms ease;
-    -moz-transition: 500ms ease;
-    -ms-transition: 500ms ease;
-    -o-transition: 500ms ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-#portfolio .container:hover .overlay {
-    opacity: 1;
-  }
-
-#portfolio .overlayLink {
-    height: 100%;
-    width: 100%;
-    color: var(--txt-primary);
-    text-decoration: none;
-    text-align: center;
-    font-size: clamp(1rem, 5vw + 1rem, 50rem);
-    font-weight: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
