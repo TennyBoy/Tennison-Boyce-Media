@@ -7,8 +7,11 @@
     --bg-primary: rgba(0,0,0,1);
 
     --txt-primary: rgba(255,255,255,1);
+    --txt-secondary: rgba(245,222,179,1);
 
     --ff-primary: "Roboto", sans-serif;
+
+    --btn-bg-1: rgba(155,15,15,1);
 }
 
 html,
@@ -70,7 +73,7 @@ nav .split > div {
 .navLinks {
     display: flex;
     justify-content: flex-end;
-    gap: 1em;
+    gap: 1.5em;
 }
 
 .navLinks a {
@@ -94,32 +97,44 @@ nav .split > div {
     color: var(--txt-primary);
 }
 
-#hero .split > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#hero main {
-    height: 100%;
-    width: 100%;
+#heroDiv1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
+#heroDiv1 > .split {
+    flex-direction: column;
+}
+
+#hero main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #hero main h1 {
+    height: fit-content;
+    width: fit-content;
     font-size: clamp(1rem, 2vw + 1rem, 50rem);
     font-weight: 900;
 }
 
 #hero main h2 {
+    height: fit-content;
+    width: fit-content;
     font-size: clamp(1rem, 0.75vw + 1rem, 50rem);
     font-weight: 100;
 }
 
+#hero .split > #heroDiv2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #heroImg {
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
 }
